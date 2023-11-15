@@ -1,0 +1,230 @@
+:root {
+  --pink: #f14e95;
+  --yellow: #f3c63d;
+  --blue: #27b0ed;
+  --bg: #0a0a0a;
+  --shadow: 0 2px rgb(0 0 0/0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Concert One", cursive;
+  min-height: 2000px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: sepia();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  /* background-color: var(--bg); */
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 5rem;
+  color: var(--blue);
+}
+
+.hero h4 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.6rem;
+}
+
+.hero p {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+
+.hero a {
+  color: var(--blue);
+  background-color: white;
+}
+
+.hero a:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.mynavbar {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(3px);
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url(img/floral.png);
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+.home h2,
+.info h2 {
+  color: var(--blue);
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+}
+
+.home h3 {
+  color: #444;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.home .couple {
+  margin-top: 100px;
+}
+
+.home .couple h3 {
+  font-family: "Dancing Script", cursive;
+  color: var(--blue);
+  font-size: 2.4rem;
+}
+
+.home .couple img {
+  width: 100%;
+}
+
+.home .heart {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+}
+
+.home .heart i {
+  margin: auto;
+  color: red;
+}
+
+.info {
+  background-color: var(--bg);
+  color: white;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.info a {
+  color: var(--blue);
+  background-color: white;
+}
+
+.info a:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.info .alamat {
+  font-size: 1.1rem;
+}
+
+.info .description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Media Query */
+
+/* Extra Large */
+
+@media (max-width: 1200px) {
+  .home .heart {
+    transform: translateX(-50%) translateY(100px);
+  }
+}
+
+/* Laptop */
+
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 50px;
+  }
+
+  .home .heart {
+    display: none;
+  }
+}
+
+/* Tab */
+
+@media (max-width: 768) {
+  html {
+    font-size: 65%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 5px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+/* Phone */
+
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 2.5px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
