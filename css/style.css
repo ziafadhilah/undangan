@@ -283,6 +283,30 @@ body {
   border-radius: 5px;
 }
 
+.timeline li .timeline-panel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #17a2b8;
+  border-right: 0 solid #17a2b8;
+  border-bottom: 14px solid transparent;
+  top: 81px;
+  right: -13px;
+}
+
 /* Media Query */
 
 /* Extra Large */
