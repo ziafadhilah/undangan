@@ -275,6 +275,12 @@ body {
 }
 
 .timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  position: relative;
+  border-radius: 5px;
 }
 
 /* Media Query */
