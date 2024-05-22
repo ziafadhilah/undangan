@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -48,68 +48,86 @@
     <script src="countdown/simplyCountdown.min.js"></script>
 
     <!-- Style -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+      integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <nav
+      class="navbar navbar-light navbar-expand fixed-bottom rounded-top-4 p-0 mynavbar"
+      id="navbar-menus"
+    >
+      <ul class="navbar-nav nav-justified w-100 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#hero">
+            <i class="fas fa-home"></i>
+            <span class="d-block" style="font-size: 1rem">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#home">
+            <i class="fa-solid fa-user-group"></i>
+            <span class="d-block" style="font-size: 1rem">Mempelai</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#info">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span class="d-block" style="font-size: 1rem">Acara</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#story">
+            <i class="fa-solid fa-history"></i>
+            <span class="d-block" style="font-size: 1rem">Story</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#galeri">
+            <i class="fa-solid fa-images"></i>
+            <span class="d-block" style="font-size: 1rem">Galeri</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ucapan">
+            <i class="fa-solid fa-comments"></i>
+            <span class="d-block" style="font-size: 1rem">Ucapan</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <section
       id="hero"
       class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
     >
-      <main>
+      <main
+        data-bs-spy="scroll"
+        data-bs-target="#navbar-menus"
+        data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+      >
         <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
         <h1>Zia & Putri</h1>
-        <p>Akan melangsungkan pertunangan dalam :</p>
+        <p>Akan melangsungkan pernikahan dalam :</p>
         <div class="simply-countdown simply-section"></div>
-        <a href="#home" class="btn btn-sm mt-4">Lihat Undangan</a>
+        <a href="#home" class="btn btn-sm mt-4 btn-light"
+          ><i class="fa fa-envelope-open"></i>&nbsp;Lihat Undangan</a
+        >
       </main>
     </section>
-    <nav class="navbar navbar-expand-md sticky-top mynavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">Z & P</a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Z & P</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#info">Info</a>
-              <a class="nav-link" href="#story">Story</a>
-              <a class="nav-link" href="#gallery">Gallery</a>
-              <a class="nav-link" href="#rsvp">RSVP</a>
-              <a class="nav-link" href="#gifts">Gifts</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+
     <section id="home" class="home">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h2>Acara Pertunangan</h2>
-            <h3>Diselenggarakan pada 14 Januari 2024 di ...</h3>
+            <h2>Acara Pernikahan</h2>
+            <h3>Diselenggarakan pada 30 Juni 2024 di ...</h3>
             <p>
               Oleh karena itu, dengan segala hormat, kami bermaksud untuk
               mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara kami.
@@ -117,51 +135,45 @@
           </div>
         </div>
         <div class="row couple">
-          <div class="col-lg-6">
+          <div class="col-lg-6 mb-5">
             <div class="row">
               <div class="col-8 text-end">
-                <h3>Zia</h3>
+                <h3>Muhammadzia Fadhilah Ramdhani, S.T</h3>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Obcaecati ipsa vitae enim temporibus ullam dicta, id corporis
-                  rerum sunt facere quo accusamus.
-                </p>
-                <p>
-                  Putra dari Bpk. Achdijat <br />dan <br />
-                  Ibu Tuti
+                  Anak pertama dari tiga bersaudara <br />Bpk. Achdijat Supriady
+                  <br />& <br />
+                  Ibu Tuti Mardiati
                 </p>
               </div>
               <div class="col-4">
                 <img
-                  src="img/zia.jpg"
+                  src="assets/img/zia.jpg"
                   alt="Zia Fadhilah"
-                  class="img-responsive rounded-circle"
+                  class="img-fluid rounded-circle"
                 />
               </div>
             </div>
           </div>
-
-          <span class="heart"><i class="bi bi-heart-fill"></i></span>
-
+          <!-- <div
+            class="col-lg-2 d-flex align-items-center justify-content-center position-relative"
+          >
+            <span class="heart"><i class="bi bi-heart-fill"></i></span>
+          </div> -->
           <div class="col-lg-6">
             <div class="row">
               <div class="col-4">
                 <img
-                  src="img/putri.jpg"
+                  src="assets/img/putri.jpg"
                   alt="Putri"
-                  class="img-responsive rounded-circle"
+                  class="img-fluid rounded-circle"
                 />
               </div>
               <div class="col-8">
-                <h3>Putri</h3>
+                <h3>Putri Gustriyani Suryono, S.Kom</h3>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Obcaecati ipsa vitae enim temporibus ullam dicta, id corporis
-                  rerum sunt facere quo accusamus.
-                </p>
-                <p>
-                  Putri dari Bpk. Suryono <br />dan <br />
-                  Dedeh
+                  Anak ke tiga dari empat bersaudara <br />
+                  Bpk. Suryono <br />& <br />
+                  Ibu Dedeh
                 </p>
               </div>
             </div>
@@ -169,6 +181,18 @@
         </div>
       </div>
     </section>
+
+    <svg
+      xmlns="https://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      class="format-svg"
+    >
+      <path
+        fill="#17a2b8"
+        fill-opacity="1"
+        d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+      ></path>
+    </svg>
 
     <section id="info" class="info">
       <div class="container">
@@ -176,74 +200,165 @@
           <div class="col-md-8 col-10 text-center">
             <h2>Informasi Acara</h2>
             <p class="alamat">
-              Alamat : Belakang Mts Negeri 2 Antapani, Bandung.
+              Alamat: Belakang Mts Negeri 2 Antapani, Bandung.
             </p>
             <a
               href="https://maps.app.goo.gl/H9PwNnbnsWQv4JDPA"
               target="_blank"
-              class="btn btn-sm my-3"
+              class="btn btn-sm btn-light my-3"
             >
-              Klik untuk membuka map
+              <i class="bi bi-geo-alt"></i>
+              Buka Map
             </a>
             <p class="description">
               Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di
               tujuan namun tidak ada tanda-tanda sedang dilangsungkan acara
-              pertunangan, boleh jadi Anda salah jadwal, atau salah tempat.
+              pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.
             </p>
           </div>
         </div>
-
         <div class="row justify-content-center mt-4">
           <div class="col-md-5 col-10">
-            <div class="card text-center text-bg-light">
-              <div class="card-header">Acara</div>
+            <div class="card text-center text-bg-light mb-3">
+              <div class="card-header">Akad Nikah</div>
               <div class="card-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
-                perferendis dolorem impedit? Cum totam veritatis molestias
-                voluptatibus, id soluta, necessitatibus incidunt iste nemo atque
-                illum nulla aut nostrum? Libero, corrupti!
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>08.00 - 10.00</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Minggu, 30 Juni 2024</span>
+                  </div>
+                </div>
               </div>
-              <div class="card-footer">
-                Saat acara diharapkan untuk kondusif
-              </div>
+              <!-- <div class="card-footer">
+                Saat acara diharapkan untuk kondusif, agar menjaga kekhidmatan
+                dan kekhusyuan seluruh prosesi.
+              </div> -->
             </div>
           </div>
-          <div class="col-md-5 col-10">
+          <div class="col-md-5 col-10 mb-3">
             <div class="card text-center text-bg-light">
-              <div class="card-header">Acara</div>
+              <div class="card-header">Resepsi</div>
               <div class="card-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
-                perferendis dolorem impedit? Cum totam veritatis molestias
-                voluptatibus, id soluta, necessitatibus incidunt iste nemo atque
-                illum nulla aut nostrum? Libero, corrupti!
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>10.00 - Selesai</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Minggu, 30 Juni 2024</span>
+                  </div>
+                </div>
               </div>
-              <div class="card-footer">
-                Saat acara diharapkan untuk kondusif
-              </div>
+              <!-- <div class="card-footer">
+                Saat acara diharapkan untuk kondusif, agar menjaga kekhidmatan
+                dan kekhusyuan seluruh prosesi.
+              </div> -->
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-10 text-center">
+              <p class="description">
+                Saat acara diharapkan untuk kondusif, agar menjaga kekhidmatan
+                dan kekhusyuan seluruh prosesi.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <svg
+      xmlns="https://www.w3.org/2000/svg"
+      viewBox="0 0 1440 350"
+      class="format-svg2"
+    >
+      <path
+        fill="white"
+        fill-opacity="1"
+        d="M0,96L30,106.7C60,117,120,139,180,154.7C240,171,300,181,360,186.7C420,192,480,192,540,181.3C600,171,660,149,720,154.7C780,160,840,192,900,208C960,224,1020,224,1080,208C1140,192,1200,160,1260,138.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+      ></path>
+    </svg>
+
+    <section id="story" class="story">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2>Cerita Kami</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus inventore porro veritatis vel dolore aspernatur alias
+            odio veniam qui eveniet maiores, quas, quam id, fugit accusamus
+            facilis harum voluptatibus neque.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <ul class="timeline">
+              <li>
+                <div
+                  class="timeline-img"
+                  style="background-image: url('assets/img/putri.JPG')"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Pertama Bertemu</h3>
+                    <span>4 Juli 2020</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corporis laudantium nobis laboriosam praesentium deserunt
+                      porro?
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <audio
+      id="background-music"
+      src="assets/music/kesempurnaan-cinta.mp3"
+      loop
+      autoplay
+      muted
+    ></audio>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+
     <script>
       simplyCountdown(".simply-countdown", {
-        year: 2024, // required
-        month: 1, // required
-        day: 14, // required
-        hours: 8, // Default is 0 [0-23] integer
+        year: 2024,
+        month: 6,
+        day: 30,
+        hours: 8,
         words: {
-          //words displayed into the countdown
           days: { singular: "Hari", plural: " Hari" },
           hours: { singular: "Jam", plural: " Jam" },
           minutes: { singular: "Menit", plural: " Menit" },
           seconds: { singular: "Detik", plural: " Detik" },
         },
       });
+    </script>
+
+    <script>
+      // window.addEventListener("click", function () {
+      //   var audio = document.getElementById("background-music");
+      //   audio.muted = false;
+      //   audio.play();
+      // });
     </script>
   </body>
 </html>
