@@ -360,7 +360,7 @@ body {
   }
 
   .timeline li .timeline-panel {
-    width: calc((100%-200px));
+    width: calc((100% - 200px));
     float: right;
   }
 
@@ -412,5 +412,22 @@ body {
   .mynavbar .nav-link {
     font-size: 1.8rem;
     text-align: center;
+  }
+
+  .timeline li .timeline-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 60%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+  .timeline li .timeline-panel::after {
+    top: 31px;
   }
 }
