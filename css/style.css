@@ -93,7 +93,8 @@ body {
 }
 
 .home h2,
-.story h2 {
+.story h2,
+.galeri h2 {
   color: #333333;
   font-family: "Dancing Script", cursive;
   font-size: 5rem;
@@ -220,7 +221,7 @@ body {
   min-height: 100vh;
   margin-top: -1rem;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 }
 
 .story p {
@@ -323,6 +324,10 @@ body {
   border-right-width: 14px;
   left: -13px;
   right: auto;
+}
+
+.galeri {
+  margin-bottom: 5rem;
 }
 
 /* Media Query */
