@@ -116,6 +116,9 @@
         <h1>Zia & Putri</h1>
         <p>Akan melangsungkan pernikahan dalam :</p>
         <div class="simply-countdown simply-section"></div>
+        <div class="container">
+          <span id="recipient-name" style="text-transform: uppercase"></span>
+        </div>
         <a href="#home" class="btn btn-sm mt-4 btn-light"
           ><i class="fa fa-envelope-open"></i>&nbsp;Lihat Undangan</a
         >
@@ -199,9 +202,12 @@
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
             <h2>Informasi Acara</h2>
-            <p class="alamat">Tempat: Antapani Food Hall.</p>
+            <p class="alamat">
+              Alamat: Jl. Antapani Lama No.6, Sukapura, Kec. Antapani, Kota
+              Bandung, Jawa Barat 40291.
+            </p>
             <a
-              href="https://maps.app.goo.gl/H9PwNnbnsWQv4JDPA"
+              href="https://www.google.com/maps/dir//Jl.+Antapani+Lama+No.6,+Sukapura,+Kec.+Antapani,+Kota+Bandung,+Jawa+Barat+40291/@-6.9118727,107.6169561,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e68e7613c4bb691:0x797ec65befe810df!2m2!1d107.6581563!2d-6.9119597?entry=ttu"
               target="_blank"
               class="btn btn-sm btn-light my-3"
             >
@@ -480,6 +486,30 @@
       <div class="container">
         <div class="row justify-content-center">
           <h2>Ucapan</h2>
+          <div class="col-md-8">
+            <div id="ucapan-list" class="list-group mb-3">
+              <!-- Ucapan akan ditambahkan di sini -->
+            </div>
+            <!-- <div class="input-group mb-3">
+              <input
+                type="text"
+                id="nama-ucapan"
+                class="form-control"
+                placeholder="Tulis nama Anda disini"
+              />
+            </div> -->
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                id="ucapan-input"
+                class="form-control"
+                placeholder="Tulis ucapan Kamu untuk mempelai di sini..."
+              />
+            </div>
+            <button class="btn btn-primary" type="button" id="submit-ucapan">
+              Kirim
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -498,27 +528,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      simplyCountdown(".simply-countdown", {
-        year: 2024,
-        month: 6,
-        day: 30,
-        hours: 8,
-        words: {
-          days: { singular: "Hari", plural: " Hari" },
-          hours: { singular: "Jam", plural: " Jam" },
-          minutes: { singular: "Menit", plural: " Menit" },
-          seconds: { singular: "Detik", plural: " Detik" },
-        },
-      });
-    </script>
-
-    <script>
-      window.addEventListener("click", function () {
-        var audio = document.getElementById("background-music");
-        audio.muted = false;
-        audio.play();
-      });
-    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

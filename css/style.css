@@ -93,9 +93,7 @@ body {
 }
 
 .home h2,
-.story h2,
-.galeri h2,
-.ucapan h2 {
+.story h2 {
   color: #333333;
   font-family: "Dancing Script", cursive;
   font-size: 5rem;
@@ -328,11 +326,25 @@ body {
 }
 
 .galeri {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+.galeri h2 {
+  color: var(--blue);
+  font-size: 5rem;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 2rem;
 }
 
 .ucapan {
   margin-bottom: 5rem;
+}
+
+.ucapan h2 {
+  color: var(--blue);
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  margin-bottom: 2rem;
 }
 
 /* Media Query */
@@ -344,7 +356,7 @@ body {
     transform: translateX(-50%) translateY(100px);
   }
   html {
-    font-size: 75%;
+    font-size: 100%;
   }
 }
 
@@ -352,7 +364,7 @@ body {
 
 @media (max-width: 992px) {
   html {
-    font-size: 75%;
+    font-size: 100%;
   }
   .simply-countdown > .simply-section {
     padding: 50px;
@@ -396,7 +408,7 @@ body {
 
 @media (max-width: 768) {
   html {
-    font-size: 75%;
+    font-size: 100%;
   }
 
   .simply-countdown > .simply-section {
@@ -414,7 +426,7 @@ body {
 
 @media (max-width: 576px) {
   html {
-    font-size: 75%;
+    font-size: 90%;
   }
 
   .simply-countdown > .simply-section {
