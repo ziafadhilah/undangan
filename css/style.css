@@ -94,7 +94,8 @@ body {
 
 .home h2,
 .story h2,
-.galeri h2 {
+.galeri h2,
+.ucapan h2 {
   color: #333333;
   font-family: "Dancing Script", cursive;
   font-size: 5rem;
@@ -330,6 +331,10 @@ body {
   margin-bottom: 5rem;
 }
 
+.ucapan {
+  margin-bottom: 5rem;
+}
+
 /* Media Query */
 
 /* Extra Large */
@@ -337,6 +342,9 @@ body {
 @media (max-width: 1200px) {
   .home .heart {
     transform: translateX(-50%) translateY(100px);
+  }
+  html {
+    font-size: 75%;
   }
 }
 
@@ -388,7 +396,7 @@ body {
 
 @media (max-width: 768) {
   html {
-    font-size: 65%;
+    font-size: 75%;
   }
 
   .simply-countdown > .simply-section {
@@ -406,7 +414,7 @@ body {
 
 @media (max-width: 576px) {
   html {
-    font-size: 60%;
+    font-size: 75%;
   }
 
   .simply-countdown > .simply-section {
