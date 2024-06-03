@@ -201,6 +201,10 @@ body {
   color: white;
 }
 
+.svg-atas {
+  margin-top: -10rem;
+}
+
 .format-svg {
   margin-top: -1rem;
 }
@@ -358,6 +362,13 @@ body {
   html {
     font-size: 100%;
   }
+  .svg-atas {
+    margin-top: -8rem;
+  }
+
+  .home {
+    margin-top: -2rem;
+  }
 }
 
 /* Laptop */
@@ -402,6 +413,14 @@ body {
     left: -13px;
     right: auto;
   }
+
+  .svg-atas {
+    margin-top: -6rem;
+  }
+
+  .home {
+    margin-top: -2rem;
+  }
 }
 
 /* Tab */
@@ -419,6 +438,14 @@ body {
   .mynavbar .nav-link {
     font-size: 1.8rem;
     text-align: center;
+  }
+
+  .svg-atas {
+    margin-top: -5rem;
+  }
+
+  .home {
+    margin-top: -2rem;
   }
 }
 
@@ -454,5 +481,13 @@ body {
   }
   .timeline li .timeline-panel::after {
     top: 31px;
+  }
+
+  .svg-atas {
+    margin-top: -5rem;
+  }
+
+  .home {
+    margin-top: -2rem;
   }
 }

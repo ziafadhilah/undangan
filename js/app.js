@@ -5,11 +5,11 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
-let name = getQueryParam("name");
+let to = getQueryParam("to");
 
-if (name) {
+if (to) {
   document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("recipient-name").textContent = name;
+    document.getElementById("recipient-name").textContent = to;
   });
 }
 
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Mengambil nama dari parameter query
-  let name = getQueryParam("name");
+  let to = getQueryParam("to");
 
-  if (name) {
-    document.getElementById("recipient-name").textContent = name;
+  if (to) {
+    document.getElementById("recipient-name").textContent = to;
   }
 
   // Fungsi untuk menambahkan ucapan ke daftar
@@ -91,17 +91,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const ucapanText = ucapanInput.value.trim();
 
       if (ucapanText) {
-        addUcapan(name, ucapanText);
-        saveUcapan(name, ucapanText);
+        addUcapan(to, ucapanText);
+        saveUcapan(to, ucapanText);
         ucapanInput.value = ""; // Kosongkan input setelah menambah ucapan
       }
     });
-
+  // Muat ucapan dari localStorage saat halaman dimuat
+  loadUcapan();
   // Event listener untuk tombol reset ucapan
   document
     .getElementById("reset-ucapan")
     .addEventListener("click", resetUcapan);
-
-  // Muat ucapan dari localStorage saat halaman dimuat
-  loadUcapan();
 });
