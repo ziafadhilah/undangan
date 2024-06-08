@@ -97,10 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   // Muat ucapan dari localStorage saat halaman dimuat
+
+  loadUcapan();
   document
     .getElementById("reset-ucapan")
     .addEventListener("click", resetUcapan);
-
-  loadUcapan();
   // Event listener untuk tombol reset ucapan
 });
