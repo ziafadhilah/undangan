@@ -310,6 +310,11 @@ body {
   right: auto;
 }
 
+.timeline-body p {
+  text-align: justify;
+  word-spacing: 0.1em;
+}
+
 .galeri {
   margin-bottom: 2rem;
 }
