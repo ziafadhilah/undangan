@@ -38,11 +38,13 @@ simplyCountdown(".simply-countdown", {
 // ucapan
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Fungsi untuk mengambil parameter query dari URL
   function getQueryParam(param) {
     let urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
   }
 
+  // Mengambil nama dari parameter query
   let to = getQueryParam("to");
 
   if (to) {
@@ -51,20 +53,25 @@ document.addEventListener("DOMContentLoaded", function () {
     to = "Anonim";
   }
 
+  // Fungsi untuk menambahkan ucapan ke daftar
   function addUcapan(name, text) {
     const ucapanList = document.getElementById("ucapan-list");
+
     const ucapanItem = document.createElement("div");
     ucapanItem.className = "list-group-item";
     ucapanItem.textContent = `${name}: ${text}`;
+
     ucapanList.appendChild(ucapanItem);
   }
 
+  // Fungsi untuk menyimpan ucapan di localStorage
   function saveUcapan(name, text) {
     let ucapanArray = JSON.parse(localStorage.getItem("ucapan")) || [];
     ucapanArray.push({ name: name, text: text });
     localStorage.setItem("ucapan", JSON.stringify(ucapanArray));
   }
 
+  // Fungsi untuk memuat ucapan dari localStorage
   function loadUcapan() {
     let ucapanArray = JSON.parse(localStorage.getItem("ucapan")) || [];
     ucapanArray.forEach((ucapan) => {
@@ -72,37 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  async function sendUcapanToGSheets(name, text) {
-    try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxG-HQMGmHxZH6jO1miK0ehwzzAapPoNnHMIv_---AHDJY4FpMJnvVgPA4QYJD6mYne/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name: name, text: text }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const result = await response.json();
-      if (result.status === "success") {
-        console.log("Ucapan berhasil disimpan di Google Sheets");
-      } else {
-        console.error("Gagal menyimpan ucapan di Google Sheets");
-      }
-    } catch (error) {
-      console.error(
-        "There has been a problem with your fetch operation:",
-        error
-      );
-    }
+  // Fungsi untuk menghapus semua ucapan
+  function resetUcapan() {
+    localStorage.removeItem("ucapan"); // Hapus ucapan dari localStorage
+    document.getElementById("ucapan-list").innerHTML = ""; // Kosongkan tampilan ucapan
   }
 
+  // Event listener untuk tombol kirim ucapan
   document
     .getElementById("submit-ucapan")
     .addEventListener("click", function () {
@@ -112,10 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (ucapanText) {
         addUcapan(to, ucapanText);
         saveUcapan(to, ucapanText);
-        sendUcapanToGSheets(to, ucapanText); // Kirim ucapan ke Google Sheets
-        ucapanInput.value = "";
+        ucapanInput.value = ""; // Kosongkan input setelah menambah ucapan
       }
     });
+  // Muat ucapan dari localStorage saat halaman dimuat
 
+  document
+    .getElementById("reset-ucapan")
+    .addEventListener("click", resetUcapan);
   loadUcapan();
+  // Event listener untuk tombol reset ucapan
 });
