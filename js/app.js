@@ -74,13 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function sendUcapanToGSheets(name, text) {
     try {
-      const response = await fetch("YOUR_DEPLOYED_SCRIPT_URL_HERE", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name: name, text: text }),
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxG-HQMGmHxZH6jO1miK0ehwzzAapPoNnHMIv_---AHDJY4FpMJnvVgPA4QYJD6mYne/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name: name, text: text }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
