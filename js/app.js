@@ -29,13 +29,13 @@ simplyCountdown(".simply-countdown", {
 
 // audio
 
-// window.addEventListener("click", function () {
-//   var audio = document.getElementById("background-music");
-//   audio.muted = false;
-//   audio.play();
-// });
+window.addEventListener("click", function () {
+  var audio = document.getElementById("background-music");
+  audio.muted = false;
+  audio.play();
+});
 
-// ucapan
+ucapan;
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fungsi untuk mengambil parameter query dari URL
