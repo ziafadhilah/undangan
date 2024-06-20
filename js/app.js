@@ -35,7 +35,7 @@ window.addEventListener("click", function () {
   audio.play();
 });
 
-ucapan;
+// ucapan;
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fungsi untuk mengambil parameter query dari URL
